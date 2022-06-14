@@ -325,5 +325,12 @@ in
           entry = "${tools.html-tidy}/bin/tidy -quiet -errors";
           files = "\\.html$";
         };
+      markdownlint =
+        {
+          name = "markdownlint";
+          description = "Style checker and linter for markdown files";
+          entry = "${pkgs.nodePackages.markdownlint-cli}/bin/markdownlint";
+          files = "\\.md$";
+        };
     };
 }
